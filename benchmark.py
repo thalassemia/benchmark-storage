@@ -216,7 +216,7 @@ def benchmark_duckdb(threads, subscript, onedim):
             FROM read_parquet('{PARQUET_PATH}/*')
         ),
         unnest_array AS (
-            SELECT unnest(array2) AS unnested_array1,
+            SELECT unnest(array1) AS unnested_array1,
                 unnest(array2) AS unnested_array2,
                 generate_subscripts(array2, 1) AS mol_idx,
                 array3, time
